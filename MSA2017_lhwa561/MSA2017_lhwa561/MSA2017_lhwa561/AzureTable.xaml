@@ -3,4 +3,4 @@
     <ContentPage.Content>
         <Label Text="Azure Tables Navigation Page Tab" VerticalOptions="Center" HorizontalOptions="Center" />
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

@@ -100,6 +100,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "MSA2017_lhwa561.Android.dll" comes first in this list. */
 		"MSA2017_lhwa561.Android.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.ProjectOxford.Common.dll",
+		"Microsoft.ProjectOxford.Emotion.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Media.Abstractions.dll",

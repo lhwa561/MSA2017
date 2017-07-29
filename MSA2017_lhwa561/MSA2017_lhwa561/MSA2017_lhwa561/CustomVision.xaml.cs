@@ -25,7 +25,7 @@ namespace MSA2017_lhwa561
     {
         public CustomVision()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
         private async void loadCamera(object sender, EventArgs e)
         {
@@ -57,51 +57,119 @@ namespace MSA2017_lhwa561
             });
 
             //file.Dispose();
-            await MakePredictionRequest(file);
+            MakeAnalysisRequest(file);
         }
+
+        const string subscriptionKey = "0c9ce465dfb349f4bd8c71302edf60f7";
+        const string uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
+
         static byte[] GetImageAsByteArray(MediaFile file)
         {
             var stream = file.GetStream();
             BinaryReader binaryReader = new BinaryReader(stream);
             return binaryReader.ReadBytes((int)stream.Length);
         }
-
-        async Task MakePredictionRequest(MediaFile file)
+        
+        static async void MakeAnalysisRequest(MediaFile file)
         {
-            var client = new HttpClient();
+            HttpClient client = new HttpClient();
 
-            client.DefaultRequestHeaders.Add("Prediction-Key", "a51ac8a57d4e4345ab0a48947a4a90ac");
+            // Request headers.
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
 
-            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/4da1555c-14ca-4aaf-af01-d6e1e97e5fa6/image?iterationId=7bc76035-3825-4643-917e-98f9d9f79b71";
+            // Request parameters. A third optional parameter is "details".
+            string requestParameters = "returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
+
+            // Assemble the URI for the REST API Call.
+            string uri = uriBase + "?" + requestParameters;
 
             HttpResponseMessage response;
 
             byte[] byteData = GetImageAsByteArray(file);
 
-            using (var content = new ByteArrayContent(byteData))
+            using (ByteArrayContent content = new ByteArrayContent(byteData))
             {
-
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json" and "multipart/form-data".
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-                response = await client.PostAsync(url, content);
 
-                Debug.WriteLine("1");
+                // Execute the REST API call.
+                response = await client.PostAsync(uri, content);
 
-                if (response.IsSuccessStatusCode)
+                // Get the JSON response.
+                string contentString = await response.Content.ReadAsStringAsync();
+
+                // Display the JSON response.
+                Debug.WriteLine("\nResponse:\n");
+                Debug.WriteLine(JsonPrettyPrint(contentString));
+            }
+        }
+
+        /// <summary>
+        /// Formats the given JSON string by adding line breaks and indents.
+        /// </summary>
+        /// <param name="json">The raw JSON string to format.</param>
+        /// <returns>The formatted JSON string.</returns>
+        static string JsonPrettyPrint(string json)
+        {
+            if (string.IsNullOrEmpty(json))
+                return string.Empty;
+
+            json = json.Replace(Environment.NewLine, "").Replace("\t", "");
+
+            StringBuilder sb = new StringBuilder();
+            bool quote = false;
+            bool ignore = false;
+            int offset = 0;
+            int indentLength = 3;
+
+            foreach (char ch in json)
+            {
+                switch (ch)
                 {
-                    Debug.WriteLine("2");
-                    var responseString = await response.Content.ReadAsStringAsync();
-
-                    EvaluationModel responseModel = JsonConvert.DeserializeObject<EvaluationModel>(responseString);
-
-                    double max = responseModel.Predictions.Max(m => m.Probability);
-
-                    TagLabel.Text = (max >= 0.5) ? "Hotdog" : "Not hotdog";
-
+                    case '"':
+                        if (!ignore) quote = !quote;
+                        break;
+                    case '\'':
+                        if (quote) ignore = !ignore;
+                        break;
                 }
 
-                //Get rid of file once we have finished using it
-                file.Dispose();
+                if (quote)
+                    sb.Append(ch);
+                else
+                {
+                    switch (ch)
+                    {
+                        case '{':
+                        case '[':
+                            sb.Append(ch);
+                            sb.Append(Environment.NewLine);
+                            sb.Append(new string(' ', ++offset * indentLength));
+                            break;
+                        case '}':
+                        case ']':
+                            sb.Append(Environment.NewLine);
+                            sb.Append(new string(' ', --offset * indentLength));
+                            sb.Append(ch);
+                            break;
+                        case ',':
+                            sb.Append(ch);
+                            sb.Append(Environment.NewLine);
+                            sb.Append(new string(' ', offset * indentLength));
+                            break;
+                        case ':':
+                            sb.Append(ch);
+                            sb.Append(' ');
+                            break;
+                        default:
+                            if (ch != ' ') sb.Append(ch);
+                            break;
+                    }
+                }
             }
+
+            return sb.ToString().Trim();
         }
     }
 }

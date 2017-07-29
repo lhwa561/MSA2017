@@ -10,4 +10,4 @@
         </StackLayout>
         <Image x:Name="image" Aspect="AspectFit"/>
     </StackLayout>
-</ContentPage>
+</ContentPage> 
