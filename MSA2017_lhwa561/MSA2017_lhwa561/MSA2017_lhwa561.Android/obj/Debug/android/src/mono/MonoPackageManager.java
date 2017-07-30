@@ -102,6 +102,8 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Microsoft.ProjectOxford.Common.dll",
 		"Microsoft.ProjectOxford.Emotion.dll",
+		"Microsoft.WindowsAzure.Mobile.dll",
+		"Microsoft.WindowsAzure.Mobile.Ext.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Media.Abstractions.dll",

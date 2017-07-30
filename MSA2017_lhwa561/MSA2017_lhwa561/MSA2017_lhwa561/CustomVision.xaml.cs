@@ -11,7 +11,7 @@ using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using MSA2017_lhwa561.Model;
+//using MSA2017_lhwa561.Model;
 
 using Newtonsoft.Json;
 

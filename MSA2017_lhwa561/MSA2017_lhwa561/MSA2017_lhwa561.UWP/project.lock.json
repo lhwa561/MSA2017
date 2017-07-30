@@ -2,6 +2,23 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -2492,6 +2509,23 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -5037,6 +5071,23 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -7621,6 +7672,23 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -10175,6 +10243,23 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -12768,6 +12853,23 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -15322,6 +15424,23 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Microsoft.Azure.Mobile.Client/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10",
+          "Microsoft.Bcl.Build": "1.0.21",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll": {},
+          "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -17916,6 +18035,48 @@
     }
   },
   "libraries": {
+    "Microsoft.Azure.Mobile.Client/3.1.0": {
+      "sha512": "L/RF/9A/mMFifQsTBRmSPV3UpvG11LR+0vsm7KKkOW7pLeRmsAWFtfKRUKoEfgdi2XoOFSLkXk88w8jVXV5uJA==",
+      "type": "package",
+      "path": "microsoft.azure.mobile.client/3.1.0",
+      "files": [
+        "lib/Xamarin.iOS10/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/Xamarin.iOS10/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/Xamarin.iOS10/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/Xamarin.iOS10/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/monoandroid/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/monoandroid/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/monoandroid/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/monoandroid/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/monotouch/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/monotouch/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/monotouch/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/monotouch/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/net45/Microsoft.WindowsAzure.Mobile.Ext.XML",
+        "lib/net45/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/net45/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/net45/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.pri",
+        "lib/netcore45/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/netcore45/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/netcore45/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/portable-win+net45+wp8+wpa81+monotouch+monoandroid/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/portable-win+net45+wp8+wpa81+monotouch+monoandroid/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.UI.dll",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.UI.xml",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/wp8/Microsoft.WindowsAzure.Mobile.xml",
+        "lib/wpa81/Microsoft.WindowsAzure.Mobile.Ext.dll",
+        "lib/wpa81/Microsoft.WindowsAzure.Mobile.Ext.xml",
+        "lib/wpa81/Microsoft.WindowsAzure.Mobile.dll",
+        "lib/wpa81/Microsoft.WindowsAzure.Mobile.xml",
+        "microsoft.azure.mobile.client.3.1.0.nupkg.sha512",
+        "microsoft.azure.mobile.client.nuspec"
+      ]
+    },
     "Microsoft.Bcl/1.1.10": {
       "sha512": "+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
       "type": "package",
@@ -24936,6 +25097,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Microsoft.Azure.Mobile.Client >= 3.1.0",
       "Microsoft.Bcl >= 1.1.10",
       "Microsoft.Bcl.Build >= 1.0.21",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
@@ -24971,6 +25133,7 @@
       }
     },
     "dependencies": {
+      "Microsoft.Azure.Mobile.Client": "[3.1.0, )",
       "Microsoft.Bcl": "1.1.10",
       "Microsoft.Bcl.Build": "1.0.21",
       "Microsoft.Net.Http": "2.2.29",

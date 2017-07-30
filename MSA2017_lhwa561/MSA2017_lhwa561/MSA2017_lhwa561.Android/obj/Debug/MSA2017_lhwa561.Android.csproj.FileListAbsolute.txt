@@ -6,6 +6,8 @@ D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\FormsViewGroup.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.ProjectOxford.Common.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
+D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
+D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\MSA2017_lhwa561.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Newtonsoft.Json.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Plugin.CurrentActivity.dll
@@ -31,6 +33,8 @@ D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\MSA2017_lhwa561.dll.config
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\FormsViewGroup.pdb
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\FormsViewGroup.dll.mdb
+D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Newtonsoft.Json.xml
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Plugin.CurrentActivity.xml
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\Plugin.Media.pdb
