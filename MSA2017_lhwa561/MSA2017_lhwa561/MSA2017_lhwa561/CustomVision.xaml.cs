@@ -30,7 +30,7 @@ namespace MSA2017_lhwa561
         }
         private async void loadCamera(object sender, EventArgs e)
         {
-          
+            
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -51,7 +51,11 @@ namespace MSA2017_lhwa561
             if (file == null)
                 return;
 
-           
+
+            GenderLabel.Text = "Analysing...";
+            AgeLabel.Text = "";
+            EmotionLabel.Text = "";
+
             image.Source = ImageSource.FromStream(() =>
             {
                 return file.GetStream();
@@ -99,10 +103,7 @@ namespace MSA2017_lhwa561
 
                 // Get the JSON response.
                 string contentString = await response.Content.ReadAsStringAsync();
-
-                // Display the JSON response.
-                //Debug.WriteLine("\nResponse:\n");
-                //Debug.WriteLine(JsonPrettyPrint(contentString));
+               
                 JsonToList(contentString);
             }
         }
@@ -221,10 +222,7 @@ namespace MSA2017_lhwa561
                 }
             }
 
-
-
-                //Debug.WriteLine("SHIT IS GOING ON" + emotions.Keys.Max());
-                List<string> emotionString = new List<string>();
+            List<string> emotionString = new List<string>();
             emotionString.Add("Anger");
             emotionString.Add("Contempt");
             emotionString.Add("Disgust");
@@ -235,7 +233,7 @@ namespace MSA2017_lhwa561
             emotionString.Add("Surprise");
 
             int MaxIndex = 0;
-            Debug.WriteLine("Determining Max Index");
+            //Debug.WriteLine("Determining Max Index");
             for (int i = 1; i < 8; i++)
             {
                 if (emotions[MaxIndex] < emotions[i])

@@ -4,10 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:MSA2017_lhwa561" 
     x:Class="MSA2017_lhwa561.MainPage">
-    <NavigationPage Title="Information"> 
+    <NavigationPage Title="Photo Analyser" BarBackgroundColor="LightGray" BarTextColor="SkyBlue" BackgroundColor="LightGray"> 
         <x:Arguments>
-            <local:AzureTable />
+            <local:CustomVision />
         </x:Arguments>
     </NavigationPage>
-    <local:CustomVision />
+    <local:AzureTable />
+    <local:InfoPage />
 </TabbedPage>

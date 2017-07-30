@@ -29,5 +29,16 @@ namespace MSA2017_lhwa561
             FaceList.ItemsSource = FaceInformation;
             // Debug.WriteLine("FACE LIST GOT");
         }
+
+        async void Handle_ClickedDelete(object sender, System.EventArgs e)
+        {
+            List<MSA2017lhwa561Table> FaceInformation = await AzureManager.AzureManagerInstance.GetFaceInformation();
+            for (int i = 0; i < FaceInformation.Count; i++)
+            {
+                await AzureManager.AzureManagerInstance.DeleteFaceInformation(FaceInformation[i]);
+            }
+            FaceInformation.Clear();
+            FaceList.ItemsSource = FaceInformation;
+        }
     }
 }

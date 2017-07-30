@@ -49,5 +49,10 @@ namespace MSA2017_lhwa561
         {
             await this.MSA2017Table.InsertAsync(MSATable);
         }
+
+        public async Task DeleteFaceInformation(MSA2017lhwa561Table MSATable)
+        {
+            await this.MSA2017Table.DeleteAsync(MSATable);
+        }
     }
 }

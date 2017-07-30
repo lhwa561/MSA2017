@@ -73,15 +73,3 @@ D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\res\xml\file_paths.xml
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\R.cs.flag
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\uploadflags.txt
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\MSA2017_lhwa561.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\bin\Debug\MSA2017_lhwa561.Android.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\MSA2017_lhwa561.Android.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\MSA2017_lhwa561.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Plugin.Media.Abstractions.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Plugin.Media.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Plugin.Permissions.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
