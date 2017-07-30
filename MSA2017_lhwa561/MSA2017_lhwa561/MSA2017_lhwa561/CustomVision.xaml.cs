@@ -100,8 +100,8 @@ namespace MSA2017_lhwa561
                 string contentString = await response.Content.ReadAsStringAsync();
 
                 // Display the JSON response.
-                Debug.WriteLine("\nResponse:\n");
-                Debug.WriteLine(JsonPrettyPrint(contentString));
+                //Debug.WriteLine("\nResponse:\n");
+                //Debug.WriteLine(JsonPrettyPrint(contentString));
                 JsonToList(contentString);
             }
         }
@@ -176,45 +176,48 @@ namespace MSA2017_lhwa561
                 }
             }
             //bool secondQuote = false;
-           
-            for (int i = 0; i < 8; i++)
+            int itr = 0;
+            for (int j = firstofEmotion; j < jsonsize; j++)
             {
-                for (int j = firstofEmotion; j < jsonsize; j++)
+                ch = json[j];
+                if (numstate == false)
                 {
-                    ch = json[j];
-                    if (numstate == false)
-                    {
-                        
-                        if (ch == ':')
-                        {
 
-                            numstate = true;
-                            
-                        }
+                    if (ch == ':')
+                    {
+                        numstate = true;
                     }
-                    else
+                }
+                else
+                {
+                    if (ch == ',' || ch == '}') 
                     {
-                        
-                        if (ch == ',')
-                        {
-                            tempVal = float.Parse(temp.ToString());
-                            
-                            emotions.Add(i, tempVal);
 
-                            temp.Clear();
-                            numstate = false;
+                        tempVal = float.Parse(temp.ToString());
+                        emotions.Add(itr, tempVal);
+
+                        temp.Clear();
+                        numstate = false;
+                        if (itr < 7)
+                        {
+                            itr++;
+                        }
+                        else
+                        {
                             break;
                         }
-                        else if (ch != '"' && ch != ' ')
-                        {
-                            temp.Append(ch);
-                        }
+                    }
+                    else if (ch != '"' && ch != ' ')
+                    {
+                       temp.Append(ch);
                     }
                 }
             }
 
-            //Debug.WriteLine("SHIT IS GOING ON" + emotions.Keys.Max());
-            List<string> emotionString = new List<string>();
+
+
+                //Debug.WriteLine("SHIT IS GOING ON" + emotions.Keys.Max());
+                List<string> emotionString = new List<string>();
             emotionString.Add("Anger");
             emotionString.Add("Contempt");
             emotionString.Add("Disgust");
@@ -228,7 +231,6 @@ namespace MSA2017_lhwa561
             Debug.WriteLine("Determining Max Index");
             for (int i = 1; i < 8; i++)
             {
-                Debug.WriteLine(MaxIndex + ": " + emotions[MaxIndex] + i + ": " + emotions[i]);
                 if (emotions[MaxIndex] < emotions[i])
                     MaxIndex = i;
             }
