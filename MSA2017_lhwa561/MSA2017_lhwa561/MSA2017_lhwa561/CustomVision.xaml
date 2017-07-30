@@ -1,15 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MSA2017_lhwa561.CustomVision" Title="Photo Analyser MSA2017" BackgroundColor="LightGray">
     <StackLayout Margin="20" Orientation="Vertical">
-        <Button Text="Take Photo and Analyze" Clicked="loadCamera" TextColor="White" BackgroundColor="Blue"/>
+        <Button Text="Take Photo and Analyze" 
+                Clicked="loadCamera" 
+                TextColor="White" 
+                BackgroundColor="Blue"/>
         <StackLayout Orientation="Horizontal">
-            <Label x:Name="GenderLabel" TextColor="White">
+            <Label x:Name="GenderLabel"
+                   TextColor="White"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center">
             </Label>
-            <Label x:Name="AgeLabel" TextColor="White">
+            <Label x:Name="AgeLabel" 
+                   TextColor="White"                   
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
             </Label>
-            <Label x:Name="EmotionLabel" TextColor="White">
+            <Label x:Name="EmotionLabel" 
+                   TextColor="White"                   
+                   HorizontalOptions="End"
+                   VerticalOptions="Center">
             </Label>
         </StackLayout>
-        <Image x:Name="image" Aspect="AspectFit" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Image x:Name="image" 
+               Aspect="AspectFit" 
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"/>
     </StackLayout>
 </ContentPage> 
