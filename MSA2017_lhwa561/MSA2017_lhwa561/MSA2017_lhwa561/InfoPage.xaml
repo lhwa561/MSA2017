@@ -27,8 +27,8 @@
            TextColor="Black"/>
         
         <Image Source="msa.png"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"/>
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand"/>
 
         <Image Source="icon.png"
                HorizontalOptions="Center"
