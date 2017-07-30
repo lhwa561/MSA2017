@@ -44,5 +44,10 @@ namespace MSA2017_lhwa561
             Debug.WriteLine("GET INFO");
             return await this.MSA2017Table.ToListAsync();
         }
+
+        public async Task PostFaceInformation(MSA2017lhwa561Table MSATable)
+        {
+            await this.MSA2017Table.InsertAsync(MSATable);
+        }
     }
 }

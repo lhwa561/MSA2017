@@ -24,10 +24,10 @@ namespace MSA2017_lhwa561
 
         async void Handle_ClickedAsync(object sender, System.EventArgs e)
         {
-            Debug.WriteLine("BUTTON PRESSED");
+            //Debug.WriteLine("BUTTON PRESSED");
             List<MSA2017lhwa561Table> FaceInformation = await AzureManager.AzureManagerInstance.GetFaceInformation();
             FaceList.ItemsSource = FaceInformation;
-            Debug.WriteLine("FACE LIST GOT");
+            // Debug.WriteLine("FACE LIST GOT");
         }
     }
 }

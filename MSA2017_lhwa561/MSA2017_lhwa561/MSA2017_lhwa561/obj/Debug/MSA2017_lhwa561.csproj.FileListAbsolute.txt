@@ -35,3 +35,4 @@ D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MS
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.CustomVision.xaml.g.cs
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.dll
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.pdb
+D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.csprojResolveAssemblyReference.cache

@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 
 using Plugin.Media;
 using Plugin.Media.Abstractions;
+using MSA2017_lhwa561.Model;
 
 namespace MSA2017_lhwa561
 {
@@ -106,7 +107,7 @@ namespace MSA2017_lhwa561
             }
         }
 
-        void JsonToList(string json)
+        async void JsonToList(string json)
         {
             if (string.IsNullOrEmpty(json))
                 return;
@@ -117,12 +118,16 @@ namespace MSA2017_lhwa561
             int firstofGender = json.IndexOf("gender");
             int firstofAge = json.IndexOf("age");
             int firstofEmotion = json.IndexOf("anger");
-            Dictionary<int, float> emotions = new Dictionary<int, float>();
+            Dictionary<int, double> emotions = new Dictionary<int, double>();
             char ch = ' ';
             bool numstate = false;
 
             StringBuilder temp = new StringBuilder();
-            float tempVal = 0;
+            double tempVal = 0;
+
+            string g = "Male";
+            double a = 0;
+            string e = "Neutral";
 
             for (int i = firstofGender; i < jsonsize; i++)
             {
@@ -138,7 +143,8 @@ namespace MSA2017_lhwa561
                 {
                     if (ch == ',')
                     {
-                        GenderLabel.Text = "Gender: " + temp.ToString();
+                        g = temp.ToString();
+                        GenderLabel.Text = "Gender: " + g;
                         temp.Clear();
                         numstate = false;
                         break;
@@ -165,6 +171,7 @@ namespace MSA2017_lhwa561
                     if (ch == ',')
                     {
                         AgeLabel.Text = "Age: " + temp.ToString();
+                        a = double.Parse(temp.ToString());
                         temp.Clear();
                         numstate = false;
                         break;
@@ -193,7 +200,7 @@ namespace MSA2017_lhwa561
                     if (ch == ',' || ch == '}') 
                     {
 
-                        tempVal = float.Parse(temp.ToString());
+                        tempVal = double.Parse(temp.ToString());
                         emotions.Add(itr, tempVal);
 
                         temp.Clear();
@@ -234,77 +241,24 @@ namespace MSA2017_lhwa561
                 if (emotions[MaxIndex] < emotions[i])
                     MaxIndex = i;
             }
+            e = emotionString[MaxIndex];
+            EmotionLabel.Text = "Emotion: " + e;
 
-            EmotionLabel.Text = "Emotion: " + emotionString[MaxIndex];
+            await postFaceAsync(g, a, e);
 
             return;
         }
 
-        /// <summary>
-        /// Formats the given JSON string by adding line breaks and indents.
-        /// </summary>
-        /// <param name="json">The raw JSON string to format.</param>
-        /// <returns>The formatted JSON string.</returns>
-        static string JsonPrettyPrint(string json)
+        async private Task postFaceAsync(string g, double a, string e)
         {
-            if (string.IsNullOrEmpty(json))
-                return string.Empty;
-
-            json = json.Replace(Environment.NewLine, "").Replace("\t", "");
-
-            StringBuilder sb = new StringBuilder();
-            bool quote = false;
-            bool ignore = false;
-            int offset = 0;
-            int indentLength = 3;
-
-            foreach (char ch in json)
+            MSA2017lhwa561Table model = new MSA2017lhwa561Table()
             {
-                switch (ch)
-                {
-                    case '"':
-                        if (!ignore) quote = !quote;
-                        break;
-                    case '\'':
-                        if (quote) ignore = !ignore;
-                        break;
-                }
-
-                if (quote)
-                    sb.Append(ch);
-                else
-                {
-                    switch (ch)
-                    {
-                        case '{':
-                        case '[':
-                            sb.Append(ch);
-                            sb.Append(Environment.NewLine);
-                            sb.Append(new string(' ', ++offset * indentLength));
-                            break;
-                        case '}':
-                        case ']':
-                            sb.Append(Environment.NewLine);
-                            sb.Append(new string(' ', --offset * indentLength));
-                            sb.Append(ch);
-                            break;
-                        case ',':
-                            sb.Append(ch);
-                            sb.Append(Environment.NewLine);
-                            sb.Append(new string(' ', offset * indentLength));
-                            break;
-                        case ':':
-                            sb.Append(ch);
-                            sb.Append(' ');
-                            break;
-                        default:
-                            if (ch != ' ') sb.Append(ch);
-                            break;
-                    }
-                }
-            }
-
-            return sb.ToString().Trim();
+                Gender = g,
+                Age = a,
+                Emotion = e
+            };
+            await AzureManager.AzureManagerInstance.PostFaceInformation(model);
         }
+
     }
 }

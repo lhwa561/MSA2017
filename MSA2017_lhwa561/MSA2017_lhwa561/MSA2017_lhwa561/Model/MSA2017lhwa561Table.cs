@@ -11,7 +11,7 @@ namespace MSA2017_lhwa561.Model
         [JsonProperty(PropertyName = "Gender")]
         public string Gender { get; set; }
         [JsonProperty(PropertyName = "Age")]
-        public float Age { get; set; }
+        public double Age { get; set; }
         [JsonProperty(PropertyName = "Emotion")]
         public string Emotion { get; set; }
     }
