@@ -27,7 +27,6 @@ D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\bin\Debug\Xa
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.csproj.App.config
-D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.csprojResolveAssemblyReference.cache
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.MainPage.xaml.g.cs
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.App.xaml.g.cs
 D:\UNI\MSA2017\redo\MSA2017_lhwa561\MSA2017_lhwa561\MSA2017_lhwa561\obj\Debug\MSA2017_lhwa561.AzureTable.xaml.g.cs

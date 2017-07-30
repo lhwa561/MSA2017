@@ -70,7 +70,7 @@ namespace MSA2017_lhwa561
             return binaryReader.ReadBytes((int)stream.Length);
         }
         
-        static async void MakeAnalysisRequest(MediaFile file)
+        private async void MakeAnalysisRequest(MediaFile file)
         {
             HttpClient client = new HttpClient();
 
@@ -102,7 +102,140 @@ namespace MSA2017_lhwa561
                 // Display the JSON response.
                 Debug.WriteLine("\nResponse:\n");
                 Debug.WriteLine(JsonPrettyPrint(contentString));
+                JsonToList(contentString);
             }
+        }
+
+        void JsonToList(string json)
+        {
+            if (string.IsNullOrEmpty(json))
+                return;
+
+            json = json.Replace(Environment.NewLine, "").Replace("\t", "");
+            int jsonsize = json.Length;
+            //bool endofvalue = false;
+            int firstofGender = json.IndexOf("gender");
+            int firstofAge = json.IndexOf("age");
+            int firstofEmotion = json.IndexOf("anger");
+            Dictionary<int, float> emotions = new Dictionary<int, float>();
+            char ch = ' ';
+            bool numstate = false;
+
+            StringBuilder temp = new StringBuilder();
+            float tempVal = 0;
+
+            for (int i = firstofGender; i < jsonsize; i++)
+            {
+                ch = json[i];
+                if (numstate == false)
+                {
+                    if (ch == ':')
+                    {
+                        numstate = true;
+                    }
+                }
+                else
+                {
+                    if (ch == ',')
+                    {
+                        GenderLabel.Text = "Gender: " + temp.ToString();
+                        temp.Clear();
+                        numstate = false;
+                        break;
+                    }
+                    else if (ch != '"' && ch != ' ')
+                    {
+                        temp.Append(ch);
+                    }
+                }
+            }
+
+            for (int i = firstofAge; i < jsonsize; i++)
+            {
+                ch = json[i];
+                if (numstate == false)
+                {
+                    if (ch == ':')
+                    {
+                        numstate = true;
+                    }
+                }
+                else
+                {
+                    if (ch == ',')
+                    {
+                        AgeLabel.Text = "Age: " + temp.ToString();
+                        temp.Clear();
+                        numstate = false;
+                        break;
+                    }
+                    else if (ch != '"' && ch != ' ')
+                    {
+                        temp.Append(ch);
+                    }
+                }
+            }
+            //bool secondQuote = false;
+           
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = firstofEmotion; j < jsonsize; j++)
+                {
+                    ch = json[j];
+                    if (numstate == false)
+                    {
+                        
+                        if (ch == ':')
+                        {
+
+                            numstate = true;
+                            
+                        }
+                    }
+                    else
+                    {
+                        
+                        if (ch == ',')
+                        {
+                            tempVal = float.Parse(temp.ToString());
+                            
+                            emotions.Add(i, tempVal);
+
+                            temp.Clear();
+                            numstate = false;
+                            break;
+                        }
+                        else if (ch != '"' && ch != ' ')
+                        {
+                            temp.Append(ch);
+                        }
+                    }
+                }
+            }
+
+            //Debug.WriteLine("SHIT IS GOING ON" + emotions.Keys.Max());
+            List<string> emotionString = new List<string>();
+            emotionString.Add("Anger");
+            emotionString.Add("Contempt");
+            emotionString.Add("Disgust");
+            emotionString.Add("Fear");
+            emotionString.Add("Happiness");
+            emotionString.Add("Neutral");
+            emotionString.Add("Sadness");
+            emotionString.Add("Surprise");
+
+            int MaxIndex = 0;
+            Debug.WriteLine("Determining Max Index");
+            for (int i = 1; i < 8; i++)
+            {
+                Debug.WriteLine(MaxIndex + ": " + emotions[MaxIndex] + i + ": " + emotions[i]);
+                if (emotions[MaxIndex] < emotions[i])
+                    MaxIndex = i;
+            }
+
+            EmotionLabel.Text = "Emotion: " + emotionString[MaxIndex];
+
+            return;
         }
 
         /// <summary>
