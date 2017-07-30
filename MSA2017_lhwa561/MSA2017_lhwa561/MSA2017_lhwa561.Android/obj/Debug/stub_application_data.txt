@@ -1,2 +1,0 @@
-android.app.Application
-MSA2017_lhwa561.Android
